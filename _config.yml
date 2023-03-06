@@ -60,11 +60,13 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 author:
   name: "Tony"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "My awesome biography constrained to a sentence or two goes here."
+  bio: "Student, Software Developer, and Web Design Enthusiast."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -113,3 +115,7 @@ tag_archive:
   path: /tags/
 
 date_format: "%Y-%m-%d"
+
+# disable feed icon
+atom_feed:
+  hide: true

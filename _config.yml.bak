@@ -1,0 +1,122 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Tony's Blog
+subtitle: "Still Constructing"
+name: Sun Tao
+email: tonymarsh0331@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Hi, I'm Sun Tao, and I'm a student with a passion for coding. My ultimate goal is to become a full-stack software developer, and I'm currently working hard to gain the necessary skills and experience to achieve that.
+twitter_username: "@GloomyTragedy"
+github_username: TonyMarsh-Hub
+minimal_mistakes_skin: default
+search: true
+
+repository: "TonyMarsh-Hub/MyBlog"
+url: "https://TonyMarsh-Hub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/images/hi.png"
+
+# Build settings
+markdown: kramdown
+theme: jeklly-theme-chirpy
+theme_mode: dark
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-last-modified-at
+
+author:
+  name: "Tony"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Student, Software Developer, and Web Design Enthusiast."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://tony-homepage.vercel.app/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/GloomyTragedy"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/TonyMarsh-Hub"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/GloomyTragedy"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/TonyMarsh-Hub"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+date_format: "%Y-%m-%d"
+
+# disable feed icon
+atom_feed:
+  hide: true

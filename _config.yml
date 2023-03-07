@@ -41,6 +41,7 @@ social:
   email: tonymarsh0331@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://tony-homepage.vercel.app       # change to your homepage
     - https://github.com/TonyMarsh-Hub       # change to your github homepage
     - https://twitter.com/GloomyTragedy      # change to your twitter homepage
     # Uncomment below to add more social links
@@ -198,5 +199,4 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-atom_feed:
-  hidden: true
+

@@ -99,8 +99,8 @@ comments:
   giscus:
     repo: "TonyMarsh-Hub/TonyMarsh-Hub.github.io"              # <gh-username>/<repo>
     repo_id: "R_kgDOJF3b_g"
-    category: "General"
-    category_id: "DIC_kwDOJF3b_s4CU0JH"
+    category: "Announcements"
+    category_id: "DIC_kwDOJF3b_s4CU0JG"
     mapping:           # optional, default to 'pathname'
     input_position:    # optional, default to 'bottom'
     lang:              # optional, default to the value of `site.lang`

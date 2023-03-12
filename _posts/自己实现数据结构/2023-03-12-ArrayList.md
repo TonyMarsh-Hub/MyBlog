@@ -1,24 +1,20 @@
 ---
 layout: post
-title: Test Post
+title: Arraylist实现
 
 [//]: # (date: 2023-03-07 22:07 +0800)
 math: true
 mermaid: true
 category: 自己实现数据结构
-tag: notes, data structure
+tag: [Arraylist]
 ---
-# 数组
+底层数据容器 数组  `T[] data`  
+额外数据结构： `size`: 表示目前已存储的元素个数
 
-## Arraylist实现
+## 工具函数:
 
-底层数据容器 数组  T[] data  
-额外数据结构： size: 表示目前已存储的元素个数
-
-### 工具函数:
-
-+ System.arraycopy()  
-  jdk提供的高效数组移动方法
++ `System.arraycopy()`   
+  jdk提供的高效数组移动方法  
   参数 ： 1源 2位置 3目标 4目标位置 5长度
   ```java
   // 做add时的搬移，移出来一个空位
@@ -30,7 +26,7 @@ tag: notes, data structure
 
 + 索引合法性检查
 
-  ElementIndex为 [0,size) PositionIndex为[0.size]  
+  ElementIndex为 `[0,size)` PositionIndex为`[0.size]`  
   注意比较的对象是size，而不是data.length，两者的概念不要搞混  
   在做add 的时候，判断入参是否满足PositionIndex范围  
   在做remove的时候，则判断入参是否为ElementIndex范围  
@@ -46,7 +42,7 @@ tag: notes, data structure
   Size == data.length? resize cap * 2  
   Size < cap /4  && cap /2 > 0 ？  resize cap/2
 
-### Crud
+## Crud
 
 先checkIndex , 然后ensureCap ,然后做数据操作  
 添加则先搬移，后插入  
@@ -54,7 +50,7 @@ remove则先取出，后搬移
 get和set不需要做ensureCap，只需要做index检查  
 注意！，记得维护size变量做自增或自减
 
-### 迭代器实现
+## 迭代器实现
 内部维护变量p标志当前迭代到的位置，初始为0  
 hasNext ->  return p != size  
 next -> return data[p++]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Arraylist实现
+title: Arraylist from scratch
 
 [//]: # (date: 2023-03-07 22:07 +0800)
 math: true
@@ -8,6 +8,10 @@ mermaid: true
 category: 自己实现数据结构
 tag: [Arraylist]
 ---
+
+> 仅说明思路 code in my GitHub repository: [click here](https://github.com/TonyMarsh-Hub/DataStructure/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8/MyArrayList.java)
+{: .prompt-tip }
+
 底层数据容器 数组  `T[] data`  
 额外数据结构： `size`: 表示目前已存储的元素个数
 

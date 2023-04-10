@@ -3,8 +3,8 @@ layout: post
 title: "链表中使用的指针技巧"
 date: 2023-04-08 21:45 +0800
 categories:
-  - LeetCode
-tags: [LeetCode, 链表, 指针]
+  - LeetCode笔记
+tags: [LeetCode笔记, 链表, 指针]
 ---
 ## 思路
 

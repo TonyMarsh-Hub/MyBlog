@@ -20,7 +20,7 @@ math: true
 
 当区间变为二维时，我们仍然可以沿用前缀和的思路进行求解。但是不能直接用终点减去起点前缀和，而是需要采用一些新的技巧。
 
-![2D_prefixSum](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/2D_prefixSum.crqtinzgfrk.webp)
+![2D_prefixSum](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/2D_prefixSum.crqtinzgfrk.webp)
 
 ### L1314 [矩阵区域和](https://leetcode.cn/problems/matrix-block-sum)
 

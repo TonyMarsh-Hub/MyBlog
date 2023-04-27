@@ -6,7 +6,7 @@ category: 自己实现数据结构
 tag: [LinkedList]
 ---
 
-> 仅说明思路, code in my GitHub repository: [click here](https://github.com/TonyMarsh-Hub/DataStructure/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8/MyLinkedList.java)
+> 仅说明思路, code in my GitHub repository: [click here](https://github.com/TonyMarsh31/DataStructure/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8/MyLinkedList.java)
 {: .prompt-tip }
 
 # 双链表

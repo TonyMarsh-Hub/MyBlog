@@ -41,4 +41,4 @@ anyway,就是这个参数的问题，但是ssh报错没有这么具体，所以�
 不知道为什么一开始用的是scoop 安装的ssh，好像是很久以前上linux课程时用到的  
 我需要改正的地方是dont fuck around in the first place, 以及遇到问题不断重复相同类型的操作是很傻的(我在上面的那个小坑里浪费了漫长时间做无效的试错)，应该去思考问题出现在了什么环节然后做排除法，
 
-![ssh-success](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Miscellaneous/ssh-success.5aoj6tyujx80.webp)
+![ssh-success](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Miscellaneous/ssh-success.5aoj6tyujx80.webp)

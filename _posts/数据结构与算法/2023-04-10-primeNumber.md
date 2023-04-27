@@ -12,7 +12,7 @@ tags: [ 数学, 算法,素数 ]
 找到素数是很麻烦的一件事情，但是做排除一个合数是很简单的。首先从 2 开始，我们知道 2 是一个素数，那么 2的倍数就都不可能是素数了。然后我们发现
 3 也是素数，那么同理排除掉所有3的倍数。由此不断排除后，剩下的就是素数了。
 
-![primeNumber](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/数据结构与算法/primeNumber.1o7p9a3q9934.gif)
+![primeNumber](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/数据结构与算法/primeNumber.1o7p9a3q9934.gif)
 
 ## Sieve of Eratosthenes的一些优化细节
 

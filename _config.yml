@@ -29,7 +29,7 @@ description: >-                        # used by seo meta and the atom feed
 url: ''
 
 github:
-  username: TonyMarsh-Hub
+  username: TonyMarsh31
 
 twitter:
   username: GloomyTragedy
@@ -42,7 +42,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://tony-homepage.vercel.app       # change to your homepage
-    - https://github.com/TonyMarsh-Hub       # change to your github homepage
+    - https://github.com/TonyMarsh31
     - https://twitter.com/GloomyTragedy      # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -97,7 +97,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: "TonyMarsh-Hub/TonyMarsh-Hub.github.io"              # <gh-username>/<repo>
+    repo: "TonyMarsh31/TonyMarsh31.github.io"              # <gh-username>/<repo>
     repo_id: "R_kgDOJF3b_g"
     category: "Announcements"
     category_id: "DIC_kwDOJF3b_s4CU0JG"

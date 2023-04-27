@@ -75,6 +75,6 @@ trick就是，合并两个链表，一个list1 接到 list2 后面， 一个list
 (具体的代码上可以不做合拼，而是遍历到null后，把指针执行另一个list)  
 在两个新list上从头开始步进，若有交点，则一定会出现 p1 == p2的情况，若没有交点，也可以涵盖 p1==p2==null的情况
 
-![160题目](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/160题目.2e8onuj1a0bo.webp)
+![160题目](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/160题目.2e8onuj1a0bo.webp)
 
-![160图解2](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/160图解2.7gc0vw9znn40.webp)
+![160图解2](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/160图解2.7gc0vw9znn40.webp)

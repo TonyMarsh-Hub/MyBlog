@@ -52,15 +52,15 @@ while (p != null) {
 > 图片可能画的还不够好，后面的*2 、 *3等指的是 element中的每一个元素在乘算之后的结果，构成了该行的新list，elementlist本身就是最终的list
 {: .prompt-tip }
 
-![264-1](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/264-1.9r50el8tdrk.webp)
+![264-1](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/264-1.9r50el8tdrk.webp)
 
 元素1往往就是1，有些丑数题不将1作为元素，则最后求element的时候处理index
 
-![264-2](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/264-2.dcir3982ink.webp)
+![264-2](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/264-2.dcir3982ink.webp)
 
 不断求min的过程中确定Element，而Element本身也作为上述list的元素来求新的值。
 
-![264-3](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/LeetCode/264-3.27nhgxtt5h5w.webp)
+![264-3](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/LeetCode/264-3.27nhgxtt5h5w.webp)
 
 ### L378 [有序矩阵中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix)
 

@@ -17,13 +17,13 @@ tag: [多线程,ThreadLocal]
 
 补充: Entry数组在逻辑上是一个环形数组，这与其线性探查法的实现特性有关。
 
-![ThreadLocal数据结构](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/java/多线程/ThreadLocal数据结构.1vchug9zjri8.webp)
+![ThreadLocal数据结构](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/java/多线程/ThreadLocal数据结构.1vchug9zjri8.webp)
 
 定义Entry继承自ThreadLocal的弱引用是为了保证了当 ThreadLocal 实例没有被使用(没其他强引用关系)时会被垃圾回收器回收(弱引用的特性)，从而防止了内存泄漏的问题。
 
 但是多线程的环境复杂，仅做这些工作寄托于GC还是会出现问题，例如经典的ThreadLocal被GC后，其对应的Value仍然存在的内存泄露问题 。所以Threadlocal还实现一些清理方法用于清理key已经被GC的Entry，这一点单独在后续的内存泄露处理一小节中进行具体说明。
 
-一个ThreadLocal的内存泄露的模拟 -> [Github](https://github.com/TonyMarsh-Hub/Java-playground/blob/f12fc89ba1e5f025d79cd163838190a65b7e6ded/src/main/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLocal/ThreadLocalTest.java)
+一个ThreadLocal的内存泄露的模拟 -> [Github](https://github.com/TonyMarsh31/Java-playground/blob/f12fc89ba1e5f025d79cd163838190a65b7e6ded/src/main/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLocal/ThreadLocalTest.java)
 
 ### hash算法
 
@@ -63,7 +63,7 @@ ThreadLocalMap不同于HashMap的结构，ThreadLocalMap的Map实现没有使用
 
 Set的逻辑其实很简单，如下图所示
 
-![ThreadLocalSetMethod](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/java/多线程/ThreadLocalSetMethod.6lmgy403h8w0.webp)
+![ThreadLocalSetMethod](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/java/多线程/ThreadLocalSetMethod.6lmgy403h8w0.webp)
 
 但是`ThreadLocalMap.set()` 的具体实现比较繁琐，因为涉及到了线性探查与后文会提到的为防止内存泄露而执行的清理方法的一些准备。线性探查的实现逻辑这里就不赘述了，这仅阐述当在线性探查时发现key为null的待清理Entry的处理逻辑。
 
@@ -72,11 +72,11 @@ Set的逻辑其实很简单，如下图所示
 
 ---
 
-![step1](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/java/多线程/step1.4in6fell5xu0.webp)
+![step1](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/java/多线程/step1.4in6fell5xu0.webp)
 
 首先，当向后探查发现一个待清理节点时，以该节点的index来初始化一些状态: `slotToexpunge` `staleSlot` (理解这些参数的英文名会帮助理解，但这里因为想不出好的中文翻译，就干脆不翻译来防止先入为主了)
 
-![step2](https://cdn.staticaly.com/gh/TonyMarsh-Hub/image-hosting@master/Blog/java/多线程/step2.5gge26lnf0g0.webp)
+![step2](https://cdn.staticaly.com/gh/TonyMarsh31/image-hosting@master/Blog/java/多线程/step2.5gge26lnf0g0.webp)
 
 接着，向前探查寻找是否有其他需要被清理的节点以更新`slotToexpunge`，直到探查到null  
 
@@ -142,7 +142,7 @@ ThreadLocalMap在新添加一个元素或清除一个过期元素后都会判断
 ## InheritableThreadLocal
 
 我们使用`ThreadLocal`的时候，在异步场景下是无法给子线程共享父线程中创建的线程副本数据的。  
-为了解决这个问题，JDK 中还有一个`InheritableThreadLocal`类，[一个例子](https://github.com/TonyMarsh-Hub/Java-playground/blob/97d15a4f54c32ec523de463206e7241ad1edb7f9/src/main/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLocal/InheritableThreadLocalDemo.java)
+为了解决这个问题，JDK 中还有一个`InheritableThreadLocal`类，[一个例子](https://github.com/TonyMarsh31/Java-playground/blob/97d15a4f54c32ec523de463206e7241ad1edb7f9/src/main/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLocal/InheritableThreadLocalDemo.java)
 
 `InheritableThreadLocal`的实现是依靠Thread构造器中获取了父线程的`InheritableThreadLocal`复制给本线程，这带来的一个缺陷是在一些线程复用的线程池场景中，这样做是没有用的。但阿里巴巴开源了一个`TransmittableThreadLocal`组件就可以解决这个问题，这里就不再延伸，感兴趣的可自行查阅资料。
 

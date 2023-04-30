@@ -7,8 +7,8 @@ tag: [ SpringJDBC,SpringData ]
 ---
 
 > 本文旨在强调个人觉得重要的部分，而省略一些基础的准备工作，例如准备数据库等内容。如需了解更为详尽的信息，请参考原著。  
-> 以及本文并非是关于在Spring架构中进行持久化处理的最佳实践总结，相较于Mybatis提供的解决方案而言，本节中的SpringDataJDBC和SpringDataJPA更像是一种规范的low
-> level的实现，而不是一种解决方案。
+> 以及本文并非是关于在Spring架构中进行持久化处理的最佳实践总结，相较于Mybatis提供的解决方案而言，本节中的SpringDataJDBC是一种规范的low
+> level的实现，而不是一种解决方案。而JPA是在思路上和Mybatis不同的一种解决方案，对于Mybatis和JPA两者的比价不再本文的讨论范围内。
 {:.prompt-info}
 
 ## 一些概念

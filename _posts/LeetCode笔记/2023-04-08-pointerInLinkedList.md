@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "链表中的指针技巧"
+title: "LeetCode - 链表中的使用指针的技巧"
 date: 2023-04-08 21:45 +0800
 categories:
   - LeetCode笔记

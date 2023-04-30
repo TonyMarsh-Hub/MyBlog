@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "差分数组技巧"
+title: "LeetCode - 差分数组技巧"
 date: 2023-04-24 19:07 +0800
 categories:
   - LeetCode笔记

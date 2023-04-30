@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "滑动窗口技巧"
+title: "LeetCode - 滑动窗口技巧"
 date: 2023-04-26 17:54 +0800
 categories:
   - LeetCode笔记

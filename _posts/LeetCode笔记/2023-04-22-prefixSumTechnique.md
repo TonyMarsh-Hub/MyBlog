@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "前缀和技巧"
+title: "LeetCode - 前缀和技巧"
 date: 2023-04-22 17:45 +0800
 categories:
   - LeetCode笔记

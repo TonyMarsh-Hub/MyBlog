@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "更多双指针的题目"
+title: "LeetCode - 更多双指针的技巧"
 date: 2023-04-22 01:11 +0800
 categories:
   - LeetCode笔记

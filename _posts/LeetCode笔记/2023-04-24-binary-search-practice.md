@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "二分查找技巧"
+title: "LeetCode - 二分查找技巧"
 date: 2023-04-24 20:57 +0800
 categories:
   - LeetCode笔记

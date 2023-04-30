@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "数组中的指针技巧"
+title: "LeetCode - 数组中使用指针的技巧"
 date: 2023-04-22 00:42 +0800
 categories:
   - LeetCode笔记

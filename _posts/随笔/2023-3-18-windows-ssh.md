@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2023-03-18 02:26 +0800
-title: 'Learn from mistake: Connect to windows using ssh'
-category: 杂文
+title: "SSH连接局域网内的windows电脑的踩坑记录"
+category: 随笔
 tag: [SSH, windows,踩坑]
 ---
 windows SSH踩坑记录

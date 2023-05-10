@@ -2,7 +2,7 @@
 layout: post
 title: LinkedList from scratch
 date: 2023-03-24 00:15 +0800
-category: 自己实现数据结构
+category: [数据结构与算法, 自己实现简单数据结构]
 tag: [LinkedList]
 ---
 

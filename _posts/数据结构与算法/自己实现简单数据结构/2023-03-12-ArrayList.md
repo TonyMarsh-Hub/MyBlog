@@ -1,12 +1,9 @@
 ---
 layout: post
 title: Arraylist from scratch
-
-[//]: # (date: 2023-03-07 22:07 +0800)
-math: true
 mermaid: true
-category: 自己实现数据结构
-tag: [Arraylist]
+category: [ 数据结构与算法, 自己实现简单数据结构 ]
+tag: [ Arraylist ]
 ---
 
 > 仅说明思路 code in my GitHub repository: [click here](https://github.com/TonyMarsh31/DataStructure/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8/MyArrayList.java)

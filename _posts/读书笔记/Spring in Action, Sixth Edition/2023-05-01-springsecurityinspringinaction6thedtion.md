@@ -58,6 +58,10 @@ public interface UserDetailsService {
 针对UserDetails规范，一个重要的方法是getAuthorities，用于获取用户的权限信息。书中的演示项目中其getAuthorities的实现是固定返回USER权限,这显然只是为了演示而不是最佳实践.
 我自己认为一个好的做法是User对象的构造器中需要传入一个权限列表，getAuthorities方法直接返回该权限列表。对于该权限列表的构造，可以根据User在数据库中的role属性来查询authority表，然后构造权限列表。
 
+总之，如果不使用SpringSecurity提供的User模版，而是使用自定义的User，那么我们需要为其实现UserDetails接口.  
+然后一种流行的做法是在自定义的User中额外实现一个方法，将User转换为UserDetails,  
+这样最终在UserDetailsService的实现中，在使用repo 查询到User之后，再调用该方法将其转换为UserDetails返回给SpringSecurity即可。
+
 ### 用户注册
 
 思路很简单，就是一个简单的表单提交，将用户信息持久化到数据库中即可。

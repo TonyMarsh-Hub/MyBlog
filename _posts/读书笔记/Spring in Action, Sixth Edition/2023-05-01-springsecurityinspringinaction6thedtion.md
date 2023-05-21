@@ -77,7 +77,31 @@ Spring在登陆验证的时候会自动对用户输入的密码encode之后再�
 
 这一部分其实随着SpringSecurity版本的更新，具体配置的语法会有所不同，但是大致上都是一样的，都是通过配置一个SecurityFilterChain来实现的。
 
+作者在之后的文本中提到过另一种做法是 直接定义一个继承自WebSecurityConfigurerAdapter的Config类(
+用@Configuration注解注入，然后通过@EnableWebSecurity开启)
+，然后重写其configure方法来完成配置，configure方法同样用到了HttpSecurity的入参，方法体内部的具体配置是一样的  
+个人觉得该方法更简洁直接，但是如果项目中的配置比较复杂，那么还是使用SecurityFilterChain的方式更好一些，这样可以将复杂的配置进行拆分(
+其实也没差太多，仅做补充)
+
 ```java
+// 直接继承WebSecurityConfigurerAdapter，重写configure方法对HttpSecurity进行配置
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http
+    .authorizeRequests() 
+    .antMatchers("/api/tacos", "/orders")
+    .hasAuthority("USER") 
+    .antMatchers("/**")
+    .permitAll();
+  }
+}
+```
+
+```java
+// 通过(在配置类中)注入SecurityFilterChain进行配置
 @Bean
 public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
   return http
@@ -90,6 +114,10 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 }
 ```
 
+> 注意代码片段中的一个细节是，方法1中我们只要进行configure就行了，而在方法2中，在configure结束后我们要显式地call一次build方法，  
+> 这是因为方法1中，我们是reconfigure一个已经存在的SecurityFilterChain，而方法2中，我们是新建了一个SecurityFilterChain，所以需要进行显式build，然后注入Spring。
+{: .prompt-warning}
+ 
 对于一些复杂的授权场景，SpringSecurity提供了SpEL表达式的支持，可以通过表达式来实现更加复杂的授权逻辑。例如只想允许具有
 ROLE_USER 权限的用户在周二（例如，在周二）创建新的 Taco;
 

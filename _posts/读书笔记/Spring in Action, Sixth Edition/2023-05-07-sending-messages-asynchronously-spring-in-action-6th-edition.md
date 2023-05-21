@@ -57,7 +57,7 @@ JMS定义了在不同java程序中发送异步消息的规范。类似于JDBC规
 方法的参数在上一节已经提到过了，对于目的地参数来说，如果不指定String或者Destination对象，那么会发送到默认的目的地中。默认目的地的地址在配置文件中进行设置.
 
 convertAndSend之所以能够完成消息转换的原理是其使用了Spring中的消息转换器，而消息转换器的配置在配置文件中进行设置。
-具体可以查看[Spring中的消息转换器]({% post_url /读书笔记/Spring in Action, Sixth Edition/2023-04-25-converterinspring %})
+具体可以查看[Spring中的消息转换器]({% post_url /读书笔记/Spring in Action, Sixth Edition/2023-04-25-converter-in-spring %})
 
 对于消息的后处理来说，如果使用的是send方法，可以直接使用消息构建器为消息set property，例如设置header等。
 如果使用的是convertAndSend则需要添加一个参数，其一般就是简单的消息后处理器的lambda实现，或者当一个后处理太复杂时，可以抽离为方法然后使用方法引用。

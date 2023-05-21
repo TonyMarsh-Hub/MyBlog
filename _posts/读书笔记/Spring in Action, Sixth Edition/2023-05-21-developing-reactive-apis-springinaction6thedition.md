@@ -424,8 +424,7 @@ exchange是比较底层的方法，其返回的是一个ClientResponse对象，�
 不需要修改依赖)
 具体在配置上，其思路与在SpringMVC项目中类似，只需要做一些小的改动即可。
 
-如果记忆生疏，可以参考之前的博文[SpringSecurity]({% post_url /读书笔记/Spring in Action, Sixth
-Edition/2023-05-01-springsecurityinspringinaction6thedtion %}) 回顾如何在SpringMVC中使用SpringSecurity
+如果记忆生疏，可以参考之前的博文[SpringSecurity]({% post_url /读书笔记/Spring in Action, Sixth Edition/2023-05-01-spring-security-in-spring-in-action-6th-edition %}) 回顾如何在SpringMVC中使用SpringSecurity
 
 ### 网络配置
 

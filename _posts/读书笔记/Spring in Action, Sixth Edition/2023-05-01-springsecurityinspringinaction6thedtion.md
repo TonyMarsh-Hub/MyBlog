@@ -77,11 +77,24 @@ Spring在登陆验证的时候会自动对用户输入的密码encode之后再�
 
 这一部分其实随着SpringSecurity版本的更新，具体配置的语法会有所不同，但是大致上都是一样的，都是通过配置一个SecurityFilterChain来实现的。
 
+----
+补充内容 ：
+
 作者在之后的文本中提到过另一种做法是 直接定义一个继承自WebSecurityConfigurerAdapter的Config类(
 用@Configuration注解注入，然后通过@EnableWebSecurity开启)
 ，然后重写其configure方法来完成配置，configure方法同样用到了HttpSecurity的入参，方法体内部的具体配置是一样的  
+
 个人觉得该方法更简洁直接，但是如果项目中的配置比较复杂，那么还是使用SecurityFilterChain的方式更好一些，这样可以将复杂的配置进行拆分(
 其实也没差太多，仅做补充)
+
+> 补充2，与上述逻辑类似的，UserDetailsService的实现既可以像之前说的那样手动实现后直接注入Spring后就行，
+> 也可以通过继承WebSecurityConfigurerAdapter，在重写的config方法中,添加AuthenticationManagerBuilder入参，然后使用其userDetailsService方法来配置，指定一个实现了UserDetailsService接口的类的实例作为参数。  
+> 两种方法最终都是配置，但是前者只是完成配置的内容，没有具体的"配置代码",因为这部分工作Spring帮我完成了。 而后者直接接触到了SpringSecurity的内部，通过其提供的方法来完成配置。即用代码显式地完成了配置。  
+> 前者是一种更加高层次的抽象，而后者是一种更加底层的抽象。我们往往只需要使用前者即可，但是如果我们需要更加细致的配置，那么后者就是我们的选择了。(但这几乎没有什么必要)  
+> 总而言之，这些补充内容中的信息都不是必须的，但是了解一下也是好的。 Spring帮我们自动完成了很多工作，我们只需要按照它的规范来做就行了，这里介绍的是更加底层的显式地配置。
+{: .prompt-tip}
+
+----
 
 ```java
 // 直接继承WebSecurityConfigurerAdapter，重写configure方法对HttpSecurity进行配置

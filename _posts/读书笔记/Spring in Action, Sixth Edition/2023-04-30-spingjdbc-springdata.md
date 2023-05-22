@@ -11,6 +11,9 @@ tag: [ SpringJDBC,SpringData ]
 > level的实现，而不是一种解决方案。而JPA是在思路上和Mybatis不同的一种解决方案，对于Mybatis和JPA两者的比价不再本文的讨论范围内。
 {:.prompt-info}
 
+> 本文中没有涉及到 复杂表关系的处理，例如一对多，多对多等，因为这些内容是关于数据库设计的，而不是关于持久化处理的。作者也没有在原著中做特别的说明。(TODO)
+{:.prompt-info}
+
 ## 一些概念
 
 在处理关系数据时，Java 开发人员有多个选择。两个最常见的选择是 JDBC 和 JPA。SpringData为这两个选择提供了支持。

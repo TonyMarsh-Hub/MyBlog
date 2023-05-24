@@ -26,7 +26,7 @@ Boot应用程序部署到生产环境中。
 
 ---
 
-build为docker镜像可以走 docker的模式 即写一个Dockerfile文件，然后在终端中执行 docker build -t <镜像名> . 即可。
+build为docker镜像可以走 docker的模式 即写一个Dockerfile文件，然后在终端中执行 `docker build -t <镜像名>` 即可。
 
 但通过SpringBoot可以简化这一流程，直接运行`mvnw spring-boot:build-image` 或者 `gradlew bootBuildImage`
 之类的命令，其会根据pom或gradle文件中的配置，自动构建为docker镜像。

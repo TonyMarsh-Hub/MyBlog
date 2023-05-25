@@ -87,9 +87,8 @@ Libraries中。
 
 这里不讨论 how auto configuration work, 只是补充一些怎么使用
 
-并且在之前的博文 [Spring中的配置管理]({%
-post_url /读书笔记/Spring in Action, Sixth
-Edition/2023-05-02-working-with-configuration-properties-spring-in-action-6th-edition %}) 中有了详细的介绍，所以这里仅作为一些补充.
+并且在之前的博文 [Spring中的配置管理]({% post_url /读书笔记/Spring in Action, Sixth Edition/2023-05-02-working-with-configuration-properties-spring-in-action-6th-edition %}) 
+中有了详细的介绍，所以这里仅作为一些补充.
 
 - 使用`Condition`
   为自定义的配置类添加条件判断，来达到只有在满足条件的情况下才会注入到Spring容器中。具体的条件判断可以参考`Condition`

@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 # ↓ --------------------------
 
 title: Tony's Blog                          # the main title
-tagline: Still under construction.
+tagline: Record stuff that I think is useful
 
 description: >-                        # used by seo meta and the atom feed
   Hi, I'm Sun Tao, and I'm a student with a passion for coding. My ultimate goal is to become a full-stack software developer, and I'm currently working hard to gain the necessary skills and experience to achieve that.
